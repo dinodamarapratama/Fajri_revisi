@@ -1,0 +1,498 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Acrostia Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+
+<script src="js/responsiveslides.min.js"></script>
+	<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>
+  <!---->
+  <script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+
+					<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+		
+		 <script type="text/javascript" charset="utf-8">
+
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+      
+        function onDeviceReady() {
+       
+        }
+        
+         // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+       
+        }
+        
+        // Audio player
+        //
+          var my_media = null;
+        var mediaTimer = null;
+
+      
+        // Play audio
+        //
+        function playAudio(src) {
+            // Create Media object from src
+            my_media = new Media(src, onSuccess, onError);
+
+            // Play audio
+            my_media.play();
+
+            // Update my_media position every second
+            if (mediaTimer == null) {
+                mediaTimer = setInterval(function() {
+                    // get my_media position
+                    my_media.getCurrentPosition(
+                        // success callback
+                        function(position) {
+                            if (position > -1) {
+                                setAudioPosition((position) + " sec");
+                            }
+                        },
+                        // error callback
+                        function(e) {
+                            console.log("Error getting pos=" + e);
+                            setAudioPosition("Error: " + e);
+                        }
+                    );
+                }, 1000);
+            }
+        }
+
+        // Pause audio
+        // 
+        function pauseAudio() {
+            if (my_media) {
+                my_media.pause();
+            }
+        }
+
+        // Stop audio
+        // 
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+        }
+
+        // onSuccess Callback
+        //
+        function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+
+        // onError Callback 
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' + 
+                  'message: ' + error.message + '\n');
+        }
+
+        // Set audio position
+        // 
+        function setAudioPosition(position) {
+            document.getElementById('audio_position').innerHTML = position;
+        }
+
+
+        </script>
+        
+      
+	
+
+
+</head>
+<body onload="playAudio('/android_asset/www/web/audio/cikcikperiok.mp3')"> 
+<!--header-->
+<!--banner-->
+<div class="banner" id="home"  >
+	<div class="slider" >
+	    <div class="callbacks_container">
+	      <ul class="rslides" id="slider">
+	        <li>
+	          <img src="images/banner.jpg" alt="">
+			  <div class="banner-matter">
+			
+			 
+			  </div>
+	        </li>
+	        <li>
+	          <img src="images/banner1.jpg" alt=""> 
+			<div class="banner-matter">
+				
+			  
+			  </div>			  
+	        </li>
+	        <li>
+	          <img src="images/banner2.jpg" alt="">
+				<div class="banner-matter">
+				
+			  
+			  </div>
+	        </li>
+	      </ul>
+	  </div>
+	  </div>
+	  </div>
+	<!---->
+	<div class="header" >
+			<div class="container">
+			<div class="fixed-header">
+
+			<div class="logo">
+					<a href="index.html"><a href="#" class="meet1">Budaya & Wisata<span> </span></a></a>
+			</div>
+			
+				<div class="top-nav cssmenu">
+				<nav class="nav clearfix">
+					<a id="menu-toggle" class="anchor-link"><img src="images/menu.png" alt="" /></a>
+					<ul class="simple-toggle" id="nav">
+			        	<li class="current"><a href="#home" class="scroll">Home</a></li>		        	
+			        	<li ><a href="#services" class="scroll"> Budaya</a></li>
+						<li ><a href="#work" class="scroll">Wisata</a></li>
+			        </ul>
+				</nav>
+				
+				<script type="text/javascript">
+					  $(document).ready(function() {
+					
+						$('#menu-toggle').click(function () {
+					      $('#nav').toggleClass('open');
+					      e.preventDefault();
+					    });
+					    
+					});
+				</script>
+				<!---->
+				<script src="js/jquery.nav.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#nav').onePageNav({
+			begin: function() {
+			console.log('start')
+			},
+			end: function() {
+			console.log('stop')
+			}
+		});
+	});
+	</script>
+				
+				</div>
+				<div class="clearfix"> </div>
+				</div>
+		</div>
+	</div>
+	
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header").addClass("fixed");
+				}else{
+					$(".header").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+		<!-- /script-for sticky-nav -->
+
+<!--content-->
+	<div class="content">
+	<!---->
+		<div class="services" id="services">
+			<div class="container">
+				<div class="service-head">
+					<h3>KALIMANTAN BARAT</h3><br>
+					<img src="gambar/kalbar/1.png" width="50%">
+					<span>Kalimantan Barat </span>
+					<p>Kalimantan Barat adalah sebuah provinsi di Indonesia yang terletak di Pulau Kalimantan dengan ibu kota Provinsi Kota Pontianak.Luas wilayah Provinsi Kalimantan Barat adalah 146.807 km² (7,53% luas Indonesia). Merupakan provinsi terluas keempat setelah Papua, Kalimantan Timur dan Kalimantan Tengah. Daerah Kalimantan Barat termasuk salah satu daerah yang dapat dijuluki provinsi "Seribu Sungai".</p>
+				</div>
+				<div class=" services-grid">
+					<div class="col-md-4 service-grid"><h5>Rumah Adat </h5><br>
+						<img class="img-responsive" src="gambar/kalbar/2.png" alt=" " />
+						
+						<p>Salah satu contoh rumah adat Kalimantan Barat dinamakan Istana Kesultanan Pontianak. Istana Kesultanan Pontianak berbentuk panggung. Bagian kolongnya tidak dipergunakan, karena tanahnya berawa-rawa. <br> <br>Pada kiri-kanan istana terdapat kamar-kamar dan ditengahnya terdapat singgasana, tempat Sultan mengadakan upacara dan pertemuan. Istana tersebut terbuat dari kayu besi seluruhnya dan atapnya terbuat dari sirap kayu besi pula. </p>
+					</div>
+					<div class="col-md-4 service-grid"><h5>Pakaian Adat </h5><br>
+						<img class="img-responsive" src="gambar/kalbar/3.png" alt=" " />
+						
+						<p>Pria Kalimantan Barat memakai pakaian adat berupa tutup kepala berhiaskan bulu burung enggang, baju tanpa lengan (rompi), celana panjang sebatas lutut dan kain yang berfungsi sebagai ikat pinggang. <br> <br> Perhiasan yang dipakainya berupa kalung manik-manik. Wanitanya memakai kain yang menutup bagian dada, juga lapisan kain-kain yang berfungsi sebagai setagen dan kain yang ditenun. Perhiasan yang dipakainya berupa bulu enggang sebagai perhiasan kepala, kalung manik-manik dan gelang di lengan. Pakaian adat ini berasal dari suku Dayak. </p>
+					</div>
+					<div class="col-md-4 service-grid"><h5>Senjata Tradisional</h5><br>
+						<img class="img-responsive" src="gambar/kalbar/4.png"  alt=" " />
+						<h6>Mandau</h6>
+						<p>Mandau adalah senjata tradisional yang biasa dipakai oleh penduduk di Kalimantan Barat. MAndau adalah sejenis parang dan ada pula mandau yang dipakai untuk keperluan sehari-hari. <br> <br> Senjata lainnya adalah perisai, sumpitan, tombak, dan sabit. Mandau untuk keperluan berperang, dihiasi dengan rambut manusia sebagai lambang keberanian. <br> <br> Perisainya yang disebut kelikit berukuran setinggi badan dengan diberi hiasan ukir-ukiran berwarna hitam dan merah. Senjata lainnya adalah sumpitan dengan anak sumpit (damak) yang ujungnya diberi racun getah pohon yang disebut ipoh. </p>
+					</div>
+					<div class="col-md-4 service-grid "><h5>Alat Musik</h5><br>
+						<img class="img-responsive" src="gambar/kalbar/5 (1).png" alt=" " />
+						<h6>Kolatung</h6><br>
+						<img class="img-responsive" src="gambar/kalbar/5 (2).png" alt=" " />
+						<h6>Sapek</h6><br>
+						<img class="img-responsive" src="gambar/kalbar/5 (3).png" alt=" " />
+						<h6>Balikan</h6><br>
+						<img class="img-responsive" src="gambar/kalbar/5 (4).png" alt=" " />
+						<h6>Kangkuang</h6>
+
+					</div>
+					<div class="col-md-4 service-grid"><h5>Tarian Daerah </h5><br>
+						<img class="img-responsive" src="gambar/kalbar/6 (1).png" alt=" " />
+						<h6>Tari Manang</h6><br>
+						<img class="img-responsive" src="gambar/kalbar/6 (2).png" alt=" " />
+						<h6>Tari Zapin</h6><br>
+						<img class="img-responsive" src="gambar/kalbar/6 (3).png" alt=" " />
+						<h6>Tari Mandau</h6><br>
+						<img class="img-responsive" src="gambar/kalbar/6 (4).png" alt=" " />
+						<h6>Tari Jonggan</h6><br>
+						<img class="img-responsive" src="gambar/kalbar/6 (5).png" alt=" " />
+						<h6>Tari Kondan</h6>
+					</div>
+					<div class="col-md-4 service-grid"><h5>Suku dan Bahasa </h5><br>
+						
+						<p>Suku : Suku dan marga yang terdapat didaerah kalimantan Barat adalah : Dayak (Ngaju, Apa Kayan, Kalimantan, Murut, Punan, Ot Danun, dan lain-lain).Bahasa Daerah : Dayak, Kayan, Ot Danun dan lain-lain. </p>
+					</div>
+
+
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		</div>
+		<!---->
+	
+		<!---->
+		<div class="work" id="work">
+			<div class="container">
+				
+				<div class=" work-top">					
+				<div class="by-type">
+					<h6>Wisata</h6>
+				</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+					<div id="portfoliolist">
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper ">		
+							<a href="gambar/kalbar/a.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						    <img class="img-responsive" src="gambar/kalbar/a.png" alt=""  /> 
+
+<a style="font-weight:bold;color:text-decoration:none" href="map/kb1.html">	Lihat Peta </a>
+							<span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							<p><b>Taman Bukit Bougenville</b></p>
+							<p style="text-align:left;	padding:10px 10px 0;">Taman Bukit Bougenville ini merupakan sebuah tempat wisata berupa taman bunga. Taman Bukit Bougenville ini berada di desa Sikanjung.Dengan luas sekitar 1,5 ha taman ini berisikan berbagai macam bunga dengan aneka warna yang indah.</p><br>	<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB: Hanya 10 menit dari pusat kota Singkawang
+</p><br>												
+						</div>
+					</div>				
+					<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gambar/kalbar/b.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						    <img class="img-responsive" src="gambar/kalbar/b.png" alt=""  />
+						    <a style="font-weight:bold;color:text-decoration:none" href="map/kb2.html">	Lihat Peta </a>
+						    <span> </span>
+						     <div class="simple" >						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							<p><b>Pantai Kijing</b></p>
+							<p style="text-align:left;	padding:10px 10px 0;">Pantai Kijing terletak di Mempawah Kabupaten Pontianak, Kalimantan Barat. Pantai yang sangat indah dihiasi bukit serta pepohonan yang sejuk. Ada bukit yang menghadap ke pantai dan pepohonan kelapa yang berjajar rapi, ada juga lapangan gastrek menjadi unggulan berbanding pantai lainnya.</p><br>	
+							<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB: Hanya 25 menit dari pusat kota Mempawah
+</p><br>
+		                </div>
+					</div>		
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gambar/kalbar/c.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kalbar/c.png"  alt="" />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/kb3.html">	Lihat Peta </a>
+						     <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+						    <p><b>Pantai Kura kura </b></p>
+							<p style="text-align:left;	padding:10px 10px 0;">Pantai Kura-Kura terletak di Kabupaten Bengkayang. Pemandangan ke arah laut natuna yang luas dan terlihat jelas beberapa pulau. Seperti pulau Kabung dan Penata. Ketika malam hari, suasana gelap akan menyelimuti karena di pantai ini belum tersedia listrik. Hanya mengandalkan sinar bulan dan cahaya bintang dilangit.</p><br>	
+							<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Dari pusat kota Singkawang kita perlu ke barat sekitar 30 menit, baru sampai di lokasi
+</p><br>
+		                </div>
+					</div>				
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper ">		
+							<a href="gambar/kalbar/d.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kalbar/d.png" alt=""  />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/kb4.html">	Lihat Peta </a>
+
+						     <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							<p><b> Pantai Tanjung Batu Pemangkat </b></p>
+							<p style="text-align:left;	padding:10px 10px 0;">Pantai Tanjung Batu Pemangkat adalah pantai yang memiliki bebatuan yang menjorok ke laut. Bisa dikatakan sebagai pantai tak perpasir, karena di dominasi oleh batu. Pantai dilengkapi fasilitas bermain dan juga terdapat mercusuar yang menjulang tinggi. Pohon bakau juga ikut menghiasi keindahan pantai ini. biaya masuk ialah 5000/kepala.</p><br>	
+							<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Tidak jauh dari pusat kota Pemangkat hanya sekitar 7 menit.</p><br>	
+		                </div>
+					</div>	
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper ">		
+							<a href="gambar/kalbar/e.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kalbar/e.png" alt=""  />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/kb5.html">	Lihat Peta </a>
+						    <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							<p><b> Pantai Selimpai </b></p>
+							<p style="text-align:left;	padding:10px 10px 0;">Pantai Selimpai terletak di Desa Sebubus, Kecamatan Paloh, Kabupaten Sambas, Provinsi kalimantan Barat, Indonesia. Pantai Selimpai merupakan pantai yang memiliki luas 200 ha, dengan bentuk pulau memanjang, dengan pasir yang putih dan landai berserta pohon pinus yang berjejeran rapi serta tinggi menjulang. Yang paling menjadi daya tarik daripada objek wisata pantai selimpai ini adalah pantai ini menjadi tempat persinggahan penyu, yang antara lain adalah penyu hijau, penyu sisik, penyu lekang.</p><br>
+							<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Sekitar 15 menit dari pusat kota Paloh.</p><br>
+		                </div>
+					</div>			
+					
+					
+					
+					<div class="clearfix"> </div>
+					</div>	
+			<!-- Script for gallery Here -->
+				<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+					<script type="text/javascript">
+					$(function () {
+						
+						var filterList = {
+						
+							init: function () {
+							
+								// MixItUp plugin
+								// http://mixitup.io
+								$('#portfoliolist').mixitup({
+									targetSelector: '.portfolio',
+									filterSelector: '.filter',
+									effects: ['fade'],
+									easing: 'snap',
+									// call the hover effect
+									onMixEnd: filterList.hoverEffect()
+								});				
+							
+							},
+							
+							hoverEffect: function () {
+							
+								// Simple parallax effect
+								$('#portfoliolist .portfolio').hover(
+									function () {
+										$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+										$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+									},
+									function () {
+										$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+										$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+									}		
+								);				
+							
+							}
+				
+						};
+						
+						// Run the show!
+						filterList.init();
+					});	
+					</script>
+			<!-- Gallery Script Ends -->
+			</div>
+		</div>
+		<!---->
+	<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery.swipebox.min.js"></script> 
+	    <script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+
+	<!---->
+
+		<!---->
+		
+	</div>	
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+				
+				<p class="footer-class"> Kebudayaan dan Wisata Pulau Kalimantan </p>
+		</div>	
+		  <script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+		</div>
+
+</body>
+</html>

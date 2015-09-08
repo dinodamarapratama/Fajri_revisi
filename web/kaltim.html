@@ -1,0 +1,494 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Acrostia Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+
+<script src="js/responsiveslides.min.js"></script>
+	<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>
+  <!---->
+  <script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+
+					<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+		
+		 <script type="text/javascript" charset="utf-8">
+
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+      
+        function onDeviceReady() {
+       
+        }
+        
+         // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+       
+        }
+        
+        // Audio player
+        //
+          var my_media = null;
+        var mediaTimer = null;
+
+      
+        // Play audio
+        //
+        function playAudio(src) {
+            // Create Media object from src
+            my_media = new Media(src, onSuccess, onError);
+
+            // Play audio
+            my_media.play();
+
+            // Update my_media position every second
+            if (mediaTimer == null) {
+                mediaTimer = setInterval(function() {
+                    // get my_media position
+                    my_media.getCurrentPosition(
+                        // success callback
+                        function(position) {
+                            if (position > -1) {
+                                setAudioPosition((position) + " sec");
+                            }
+                        },
+                        // error callback
+                        function(e) {
+                            console.log("Error getting pos=" + e);
+                            setAudioPosition("Error: " + e);
+                        }
+                    );
+                }, 1000);
+            }
+        }
+
+        // Pause audio
+        // 
+        function pauseAudio() {
+            if (my_media) {
+                my_media.pause();
+            }
+        }
+
+        // Stop audio
+        // 
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+        }
+
+        // onSuccess Callback
+        //
+        function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+
+        // onError Callback 
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' + 
+                  'message: ' + error.message + '\n');
+        }
+
+        // Set audio position
+        // 
+        function setAudioPosition(position) {
+            document.getElementById('audio_position').innerHTML = position;
+        }
+
+
+        </script>
+        
+      
+	
+
+
+</head>
+<body  onload="playAudio('/android_asset/www/web/audio/indung.mp3')"> 
+<!--header-->
+<!--banner-->
+<div class="banner" id="home" >
+	<div class="slider" >
+	    <div class="callbacks_container">
+	      <ul class="rslides" id="slider">
+	        <li>
+	          <img src="images/banner.jpg" alt="">
+			  <div class="banner-matter">
+			
+			 
+			  </div>
+	        </li>
+	        <li>
+	          <img src="images/banner1.jpg" alt=""> 
+			<div class="banner-matter">
+				
+			  
+			  </div>			  
+	        </li>
+	        <li>
+	          <img src="images/banner2.jpg" alt="">
+				<div class="banner-matter">
+				
+			  
+			  </div>
+	        </li>
+	      </ul>
+	  </div>
+	  </div>
+	  </div>
+	<!---->
+	<div class="header" >
+			<div class="container">
+			<div class="fixed-header">
+
+			<div class="logo">
+					<a href="index.html"><a href="#" class="meet1">Budaya & Wisata<span> </span></a></a>
+			</div>
+			
+				<div class="top-nav cssmenu">
+				<nav class="nav clearfix">
+					<a id="menu-toggle" class="anchor-link"><img src="images/menu.png" alt="" /></a>
+					<ul class="simple-toggle" id="nav">
+			        	<li class="current"><a href="#home" class="scroll">Home</a></li>		        	
+			        	<li ><a href="#services" class="scroll"> Budaya</a></li>
+						<li ><a href="#work" class="scroll">Wisata</a></li>
+			        </ul>
+				</nav>
+				
+				<script type="text/javascript">
+					  $(document).ready(function() {
+					
+						$('#menu-toggle').click(function () {
+					      $('#nav').toggleClass('open');
+					      e.preventDefault();
+					    });
+					    
+					});
+				</script>
+				<!---->
+				<script src="js/jquery.nav.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#nav').onePageNav({
+			begin: function() {
+			console.log('start')
+			},
+			end: function() {
+			console.log('stop')
+			}
+		});
+	});
+	</script>
+				
+				</div>
+				<div class="clearfix"> </div>
+				</div>
+		</div>
+	</div>
+	
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header").addClass("fixed");
+				}else{
+					$(".header").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+		<!-- /script-for sticky-nav -->
+
+<!--content-->
+	<div class="content">
+	<!---->
+		<div class="services" id="services">
+			<div class="container">
+				<div class="service-head">
+					<h3>KALIMANTAN TIMUR</h3><br>
+					<img src="gambar/kaltim/1.png" width="50%">
+					<span>Kalimantan Timur </span>
+					<p>Kalimantan Timur atau biasa disingkat Kaltim adalah sebuah provinsi Indonesia di Pulau Kalimantan bagian ujung timur yang berbatasan dengan Malaysia, Kalimantan Tengah, Kalimantan Selatan dan Sulawesi. Luas total Kaltim adalah 129.066,64 km² dan populasi sebesar 3.6 juta. Kaltim merupakan wilayah dengan kepadatan penduduk terendah keempat di nusantara. Ibukotanya adalah Samarinda.</p>
+				</div>
+				<div class=" services-grid">
+					<div class="col-md-4 service-grid"><h5>Rumah Adat </h5><br>
+						<img class="img-responsive" src="gambar/kaltim/2.png" alt=" " />
+						
+						<p>Rumah lamin terbagi atas ruang dapur, ruang tidur dan ruang tengah guna menerima tamu atau pertemuan adat. Tangga untuk naik kerumah lamin terbuat dari satu pohon. Bentuk tangga ini tak berbeda antara rumah bangsawan dan rumah rakyat biasa. Dinding rumah terbuat dari katu diselingi daun rumbia, sedangkan kolong rumah dapan dipergunakan untuk memelihara ternak. </p>
+					</div>
+					<div class="col-md-4 service-grid"><h5>Pakaian Adat </h5><br>
+						<img class="img-responsive" src="gambar/kaltim/3.png" alt=" " />
+						
+						<p>Pria dari Kalimantan Timur memakai tutup kepala (topi) berhiaskan bulu bulu enggang, baju rompi dan kain tenun sebatas lutut. Sebuah tameng dengan hiasan yang khas berada ditangannya. Hiasan lainnya adalah kalung yang terbuat dari tulang atau gigi binatang. Sedangkan wanitanya memakai topi dengan hiasan yang khas baju rompi dan kain (rok) dengan warna dan hiasan yang khas pula. Perhiasan yang dipakai adalah kalung dan beberapa gelang dikedua belah tangannya. </p>
+					</div>
+					<div class="col-md-4 service-grid"><h5>Senjata Tradisional</h5><br>
+						<img class="img-responsive" src="gambar/kaltim/4.png"  alt=" " />
+						<h6>Mandau</h6>
+						<p>Mandau adalah semacam senjata yang berbentuk parang dengan panjang kira kira 1/2m. Mandau itu ada dua macam. Pertama, mandau yang disebut Tampilan dan dipakai untuk perang dan upacara. Kedua, mandau yang biasa dipakai untuk keperluan sehari hari. Senjata lainnya adalah bujak (senjata tombak), anak mandau, beliung, dan sumpit.</p>
+					</div>
+					<div class="col-md-4 service-grid "><h5>Alat Musik</h5><br>
+						<img class="img-responsive" src="gambar/kaltim/5 (1).png" alt=" " />
+						<h6>Ketipung</h6><br>
+						<img class="img-responsive" src="gambar/kaltim/5 (2).png" alt=" " />
+						<h6>Gambus</h6><br>
+						<img class="img-responsive" src="gambar/kaltim/5 (3).png" alt=" " />
+						<h6>Kendang</h6><br>
+				
+
+					</div>
+					<div class="col-md-4 service-grid"><h5>Tarian Daerah </h5><br>
+						<img class="img-responsive" src="gambar/kaltim/6 (1).png" alt=" " />
+						<h6>Tari Leleng</h6><br>
+						<img class="img-responsive" src="gambar/kaltim/6 (2).png" alt=" " />
+						<h6>Tari Gong</h6><br>
+						<img class="img-responsive" src="gambar/kaltim/6 (3).png" alt=" " />
+						<h6>Tari Hudoq</h6><br>
+						
+						
+					</div>
+					<div class="col-md-4 service-grid"><h5>Suku dan Bahasa </h5><br>
+						
+						<p>Suku : Suku dan marga yang terdapat didaerah Kalimantan Timur adalah :Dayak, Tidung, Kenyah, Bulungan, Berusu, Kayan, Abai, dan lain lain. Bahasa Daerah : Kenyah, Kayan, dan lain lain.  </p>
+					</div>
+
+
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		</div>
+		<!---->
+	
+		<!---->
+		<div class="work" id="work">
+			<div class="container">
+				
+				<div class=" work-top">					
+				<div class="by-type">
+					<h6>Wisata</h6>
+				</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+					<div id="portfoliolist">
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper ">	<p><b>Goa Losan</b></p>	
+
+
+							<a href="gambar/kaltim/a.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						    <img class="img-responsive" src="gambar/kaltim/a.png" alt=""  /> 
+						    <a style="font-weight:bold;color:text-decoration:none" href="map/kt1.html">	Lihat Peta </a><br>
+							<span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							Lokasi goa ini terletak ditepi jalan raya Tanah Grogot- Banjarmasin atau berjarak ± 80 Km dari Ibukota Tanah Grogot. Terdapat berbagai stalagtit dan stalagmite yang berwarna putih kekuningan, salah satunya membentuk batu melodi alami yang bila di pukul dapat mengeluarkan tangga nada. Goa Losan dalam bahasa Paser berarti goa tembus, dimana goa ini sangat besar dan luas. Habitat ribuan kelelawar dan burung walet juga berada di dalam goa tersebut sehingga menamah eksotisme goa alam ini.</p><br>													<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB: Jalan dari samarinda sekitar 80km</p><br>	
+						</div>
+					</div>				
+					<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		<p><b>Danau Jempang</b></p>
+							<a href="gambar/kaltim/b.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						    <img class="img-responsive" src="gambar/kaltim/b.png" alt=""  /> 
+						    <a style="font-weight:bold;color:text-decoration:none" href="map/kt2.html">	Lihat Peta </a>
+						    <span> </span>
+						     <div class="simple" >						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							
+							<p style="text-align:left;	padding:10px 10px 0;">Danau Jempang memiliki luas ± 15.000 Ha merupakan salah satu kekayaan Kabupaten Kutai Barat. Danau Jempang terletak di Kecamatan Jempang. Danau ini banyak mengahasilkan berbagai jenis ikan sebagai penghasilan nelayan. Dengan panoramanya yang sangat eksotis dan air danau yang bersahabat, maka danau ini menjadi pilihan menarik untuk melakukan berbagai kegiatan, seperti : Lomba perahu dayung, lomba ketinting, tempat upacara adat Pelas Danau. </p><br>	
+							<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB: Dari samarinda harus naik kendaraan dahulu kekutai, baru dari sana tidak jauh. Ada diselatan kutai</p><br>
+		                </div>
+					</div>		
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		<p><b> Pulau Derawan </b></p>
+							<a href="gambar/kaltim/c.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kaltim/c.png"  alt="" />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/kt3.html">	Lihat Peta </a>
+						     <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+						    
+							<p style="text-align:left;	padding:10px 10px 0;">Pulau tersebut termasuk dalam wilayah kecamatan pulau derawan. Pulau derawan ke pulau sangalaki memakan waktu 1 jam perjalanan dengan menggunakan speed boat. Nama pulau pulau menumbar, pulau kakaban, pulau pemana, pulau sambit, pulau bakungan, pulau inaka dan pulau maratua. Di perairan sekitar pulau pulau tersebut terhampar karang laut yang sangat indah , jenis ikan hias, juga terdapat ikan duyung, kepiting, kenari, penyu hijau dan mutiara alam.</p><br>	
+							<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Naik pesawat ke berau lalu menaiki kapal boat ke pulau derawan</p><br>
+		                </div>
+					</div>				
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper ">		<p><b> Pantai Melawai</b></p>
+							<a href="gambar/kaltim/d.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kaltim/d.png" alt=""  />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/kt4.html">	Lihat Peta </a>
+						     <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							
+							<p style="text-align:left;	padding:10px 10px 0;">Terletak dekat dengan pusat kota, Melawai adalah tempat alternatif untuk menghabiskan waktu sore hari, saat matahari terbenam pantai Melawai menyajikan pemandangan indah matahari terbenam dengan nuansa keemasan. Disini pengunjung dapat menikmati hidangan lokal dengan harga yang sangat terjangkau dalam suasana yang santai
+</p><br>	<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Tidak jauh dari pusat kota Kalimantan, naik kendaraan umum lalu minta ke jalan sudriman.</p><br>
+		                </div>
+					</div>	
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper ">		<p><b> Jantur Mapan</b></p>
+							<a href="gambar/kaltim/e.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kaltim/e.png" alt=""  />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/kt5.html">	Lihat Peta </a>
+						    <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							
+							<p style="text-align:left;	padding:10px 10px 0;">Air terjun Mapan terletak di Kampung Linggang Mapan, Kecamatan Linggang Bigung. Jantur Mapan terletak di sisi jalan raya Barong Tongkok menuju Linggang Bigung, sehingga, jantur ini menjadi tempat paling populer bagi para remaja untuk melepas lelah sekaligus mandi di air terjun. Dalam area Jantur Mapan terdapat kompleks persembahyangan Goa Maria. Dengan situasi uang alami dan sunyi, tempat ini tepat untuk berdoa dan berziarah di bulan Maria kalender Liturgi Gereja Katolik.
+</p><br><p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Terletak di pusat kota kutai</p><br>				
+
+
+
+		                </div>
+					</div>			
+					
+					
+					
+					<div class="clearfix"> </div>
+					</div>	
+			<!-- Script for gallery Here -->
+				<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+					<script type="text/javascript">
+					$(function () {
+						
+						var filterList = {
+						
+							init: function () {
+							
+								// MixItUp plugin
+								// http://mixitup.io
+								$('#portfoliolist').mixitup({
+									targetSelector: '.portfolio',
+									filterSelector: '.filter',
+									effects: ['fade'],
+									easing: 'snap',
+									// call the hover effect
+									onMixEnd: filterList.hoverEffect()
+								});				
+							
+							},
+							
+							hoverEffect: function () {
+							
+								// Simple parallax effect
+								$('#portfoliolist .portfolio').hover(
+									function () {
+										$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+										$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+									},
+									function () {
+										$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+										$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+									}		
+								);				
+							
+							}
+				
+						};
+						
+						// Run the show!
+						filterList.init();
+					});	
+					</script>
+			<!-- Gallery Script Ends -->
+			</div>
+		</div>
+		<!---->
+	<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery.swipebox.min.js"></script> 
+	    <script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+
+	<!---->
+
+		<!---->
+		
+	</div>	
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+				
+				<p class="footer-class"> Kebudayaan dan Wisata Pulau Kalimantan </p>
+		</div>	
+		  <script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+		</div>
+
+</body>
+</html>

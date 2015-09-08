@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+ <title></title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" type="text/css" href="css/demo.css" />
+ <style media="screen">
+ body {
+    background-image: url("Blue.png");
+}
+
+
+
+h1 { color: #ffffff;  font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
+h2 { color: #ffffff;  font-size: 32px; font-weight: 500; line-height: 42px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
+
+p { color: #f8f8f8;  font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
+span { color: #f8f8f8;  font-size: 12px;  padding: 0 10px ;  margin: 0 0 24px; text-align: justify; }
+
+a { color: #fff; text-decoration: underline; }
+
+a:hover { color: #1c1c1c; text-decoration: underline; }
+
+#blobs {
+ width: 300px;
+ height: 250px;
+ background: url(k.png);
+ margin: 10px auto; padding: 0;
+ position: relative;
+}
+#blobs li {margin: 0; padding: 0; list-style: none; display: block; position: absolute;}
+
+#blobs a {display: block;}
+
+#blob1 {left: 9px; top: 67px; width: 86px; height: 100px;}
+#blob2 {left: 97px; top: 150px; width: 79px; height: 86px;}
+#blob3 {left: 190px; top: 0px; width: 112px; height: 77px;}
+#blob4 {left: 193px; top: 97px; width: 100px; height: 80px;}
+#blob5 {left: 180px; top: 170px; width: 98px; height: 45px;}
+#blob1 a {height: 160px;}
+#blob2 a {height: 86px;}
+#blob3 a {height: 77px;}
+#blob4 a {height: 80px;}
+#blob5 a {height: 85px;}
+
+#blob1 a:hover {background: url(c.png) -15px -14px no-repeat;}
+#blob2 a:hover {background: url(c.png) -22px -25px no-repeat;}
+#blob3 a:hover {background: url(c.png) -30px -35px no-repeat;}
+#blob4 a:hover {background: url(c.png) -20px -20px no-repeat;}
+#blob5 a:hover {background: url(c.png) -20px -22px no-repeat;}
+
+ </style>
+</head>
+
+
+<body>
+<div class="codrops-top ">
+				<a id="help" class="codrops-icon codrops-icon-drop" href="#" onclick="Hide()"><span>Bantuan</span></a>
+
+			</div>
+<h2>Kebudayaan &amp; Wisata</h2>
+<p> PULAU KALIMANTAN</p>
+<span id="messages" style="display:none">Untuk menggunakan aplikasi ini : Pilih dan Tap salah satu daerah pada peta pulau Kalimantan.</span>
+ <ul id="blobs">
+  <li id="blob1"><a href="web/kalbar.html"></a></li>
+  <li id="blob2"><a href="web/kalteng.html" ></a></li>
+  <li id="blob3"><a href="web/kalut.html"></a></li>
+  <li id="blob4"><a href="web/kaltim.html"></a></li>
+  <li id="blob5"><a href="web/kalsel.html"></a></li>
+ </ul>
+
+                       				<script type="text/javascript">
+									function Hide() {
+									var help = document.getElementById("help");
+									help.style.display=(help.style.display!='visible')?'none':'';
+									var messages = document.getElementById("messages");
+									messages.style.display=(messages.style.display!='none')?'visible':'';
+									
+										
+									}
+									</script>
+ 
+</body>
+</html>

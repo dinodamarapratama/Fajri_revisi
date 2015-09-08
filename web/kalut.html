@@ -1,0 +1,486 @@
+	<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Acrostia Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+
+<script src="js/responsiveslides.min.js"></script>
+	<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>
+  <!---->
+  <script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+
+					<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+		
+		 <script type="text/javascript" charset="utf-8">
+
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+      
+        function onDeviceReady() {
+       
+        }
+        
+         // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+       
+        }
+        
+        // Audio player
+        //
+          var my_media = null;
+        var mediaTimer = null;
+
+      
+        // Play audio
+        //
+        function playAudio(src) {
+            // Create Media object from src
+            my_media = new Media(src, onSuccess, onError);
+
+            // Play audio
+            my_media.play();
+
+            // Update my_media position every second
+            if (mediaTimer == null) {
+                mediaTimer = setInterval(function() {
+                    // get my_media position
+                    my_media.getCurrentPosition(
+                        // success callback
+                        function(position) {
+                            if (position > -1) {
+                                setAudioPosition((position) + " sec");
+                            }
+                        },
+                        // error callback
+                        function(e) {
+                            console.log("Error getting pos=" + e);
+                            setAudioPosition("Error: " + e);
+                        }
+                    );
+                }, 1000);
+            }
+        }
+
+        // Pause audio
+        // 
+        function pauseAudio() {
+            if (my_media) {
+                my_media.pause();
+            }
+        }
+
+        // Stop audio
+        // 
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+        }
+
+        // onSuccess Callback
+        //
+        function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+
+        // onError Callback 
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' + 
+                  'message: ' + error.message + '\n');
+        }
+
+        // Set audio position
+        // 
+        function setAudioPosition(position) {
+            document.getElementById('audio_position').innerHTML = position;
+        }
+
+
+        </script>
+        
+      
+	
+
+
+</head>
+<body  onload="playAudio('/android_asset/www/web/audio/bebilinyaduyaki.mp3')" > 
+<!--header-->
+<!--banner-->
+<div class="banner" id="home">
+	<div class="slider" >
+	    <div class="callbacks_container">
+	      <ul class="rslides" id="slider">
+	        <li>
+	          <img src="images/banner.jpg" alt="">
+			  <div class="banner-matter">
+			
+			 
+			  </div>
+	        </li>
+	        <li>
+	          <img src="images/banner1.jpg" alt=""> 
+			<div class="banner-matter">
+				
+			  
+			  </div>			  
+	        </li>
+	        <li>
+	          <img src="images/banner2.jpg" alt="">
+				<div class="banner-matter">
+				
+			  
+			  </div>
+	        </li>
+	      </ul>
+	  </div>
+	  </div>
+	  </div>
+	<!---->
+	<div class="header" >
+			<div class="container">
+			<div class="fixed-header">
+
+			<div class="logo">
+					<a href="index.html"><a href="#" class="meet1">Budaya & Wisata<span> </span></a></a>
+			</div>
+			
+				<div class="top-nav cssmenu">
+				<nav class="nav clearfix">
+					<a id="menu-toggle" class="anchor-link"><img src="images/menu.png" alt="" /></a>
+					<ul class="simple-toggle" id="nav">
+			        	<li class="current"><a href="#home" class="scroll">Home</a></li>		        	
+			        	<li ><a href="#services" class="scroll"> Budaya</a></li>
+						<li ><a href="#work" class="scroll">Wisata</a></li>
+			        </ul>
+				</nav>
+				
+				<script type="text/javascript">
+					  $(document).ready(function() {
+					
+						$('#menu-toggle').click(function () {
+					      $('#nav').toggleClass('open');
+					      e.preventDefault();
+					    });
+					    
+					});
+				</script>
+				<!---->
+				<script src="js/jquery.nav.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#nav').onePageNav({
+			begin: function() {
+			console.log('start')
+			},
+			end: function() {
+			console.log('stop')
+			}
+		});
+	});
+	</script>
+				
+				</div>
+				<div class="clearfix"> </div>
+				</div>
+		</div>
+	</div>
+	
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header").addClass("fixed");
+				}else{
+					$(".header").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+		<!-- /script-for sticky-nav -->
+
+<!--content-->
+	<div class="content">
+	<!---->
+		<div class="services" id="services">
+			<div class="container">
+				<div class="service-head">
+					<h3>KALIMANTAN UTARA</h3><br>
+					<img src="gambar/kalut/1.png" width="50%">
+					<span>Kalimantan Utara </span>
+					<p>Kalimantan Utara adalah sebuah provinsi di Indonesia yang terletak di bagian utara Pulau Kalimantan. Provinsi ini berbatasan langsung dengan negara tetangga, yaitu Negara Bagian Sabah dan Serawak, Malaysia Timur.Saat ini, Kalimantan Utara merupakan provinsi termuda Indonesia, resmi disahkan menjadi provinsi dalam rapat paripurna DPR pada tanggal 25 Oktober 2012 berdasarkan Undang-undang Nomor 20 Tahun 2012.</p>
+				</div>
+				<div class=" services-grid">
+					<div class="col-md-4 service-grid"><h5>Rumah Adat </h5><br>
+						<img class="img-responsive" src="gambar/kalut/2.png" alt=" " />
+						
+						<p>Rumah Baloy merupakan rumah adat yang terkenal dari masyarakat Kalimantan Utara. Bentuk bangunan rumah adat ini terlihat lebih modern dan modis karena hasil pengembangan arsitektur Dayak dari Rumah Panjang (Rumah Lamin) yang dihasilkan oleh Masyarakat suku Tidung yang tidak lain merupakan suku di Kalimantan Utara. Seperti suku lainnya, suku Tidung ini mempunyai kebudayaan dan model rumah adat sendiri. </p>
+					</div>
+					<div class="col-md-4 service-grid"><h5>Pakaian Adat </h5><br>
+						<img class="img-responsive" src="gambar/kalut/3.png" alt=" " />
+						
+						<p>Pakaian adat Kalimantan Utara dengan pria mengenakan rompi tanpa lengan serta dililitkan kain hingga selutut. Dikepala dikenakan topi berhiaskan bulun burung, serta wanita menegnakan rompi yang bercorak khas Kalimantan tanpa lengan serta bagian bawahnya rok. Dikepalanya dihiasi topi yang unik. </p>
+					</div>
+					<div class="col-md-4 service-grid"><h5>Senjata Tradisional</h5><br>
+						<img class="img-responsive" src="gambar/kalut/4.png"  alt=" " />
+						<h6>Mandau</h6>
+						<p>Senjata Mandau merupakan senjata pusaka tradisional suku Dayak, berupa pusaka turun temurun yang dianggap keramat.</p>
+					</div>
+					<div class="col-md-4 service-grid "><h5>Alat Musik</h5><br>
+						<img class="img-responsive" src="gambar/kalut/5 (1).png" alt=" " />
+						<h6>Babun</h6><br>
+						<img class="img-responsive" src="gambar/kalut/5 (2).png" alt=" " />
+						<h6>Gambang</h6><br>
+						
+
+					</div>
+					<div class="col-md-4 service-grid"><h5>Tarian Daerah </h5><br>
+						<img class="img-responsive" src="gambar/kalut/6.png" alt=" " />
+						<h6>Tari Jepen</h6><br>
+					
+						
+					</div>
+					<div class="col-md-4 service-grid"><h5>Suku dan Bahasa </h5><br>
+						
+						<p>Suku Bangsa: Sepertiga penduduk Kalimantan Utara adalah Suku Jawa yang merupakan kelompok terbesar, disusul penduduk asal Sulawesi Selatan. Selebihnya merupakan penduduk asli Kalimantan yaitu Suku Banjar, Suku Bulungan, Suku Dayak, Suku Tidung dan Suku Kutai. Bahasa yang dipakai oleh orang Kalimantan Utara: Bahasa Indonesia, bahasa Tidung, Bahasa Dayak.  </p>
+					</div>
+
+
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		</div>
+		<!---->
+	
+		<!---->
+		<div class="work" id="work">
+			<div class="container">
+				
+				<div class=" work-top">					
+				<div class="by-type">
+					<h6>Wisata</h6>
+				</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+					<div id="portfoliolist">
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper ">	<p><b>Sungai Nyamuk</b></p>
+							<a href="gambar/kalut/a.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						    <img class="img-responsive" src="gambar/kalut/a.png" alt=""  /> 
+						    <a style="font-weight:bold;color:text-decoration:none" href="map/ku1.html">	Lihat Peta </a>	
+							<span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							
+							<p style="text-align:left;	padding:10px 10px 0;">Sungai Nyamuk merupakan salah satu kelurahan yang berada di kecamatan Sebatik Timur, di Kabupaten Nunukan, Kalimantan Timur, Indonesia. Di Sungai Nyamuk ini sebagian besar penduduk dan masyarakat bekerja dan berprofesi sabagai petani yang menggarap tanaman lada dan coklat. Di Daerah Sungai Nyamuk ini terkenal sebagai penghasil lada dan coklat dari kalimantan utara. </p><br>	<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB: Jika ingin ke sungai nyamuk harus menaiki pesawat ke nunukan, dari situ naik kendaraan umum sekitar 7 KM.</p><br>									
+						</div>
+
+					</div>				
+					<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">			
+							<p><b>Pantai Batu Lamampu </b></p>
+							<a href="gambar/kalut/b.jpg" class="b-link-stripe b-animate-go  thickbox swipebox">
+						    <img class="img-responsive" src="gambar/kalut/b.jpg" alt=""  />
+						    <a style="font-weight:bold;color:text-decoration:none" href="map/ku2.html">	Lihat Peta </a>	
+						    <span> </span>
+						     <div class="simple" >						    	
+								<label> </label>
+						    </div>		
+						</a>
+							<p style="text-align:left;	padding:10px 10px 0;">Pantai Batu Lamampu merupakan sebuah wisata pantai yang terletak di Kecamatan Sebatik, di Kabupaten Nunukan, Provinsi Kalimantan Timur. Indonesia.
+.</p><br>	<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB: Jika ingin ke pantai batu lamampu harus menaiki pesawat ke nunukan, baru menaiki kendaraan umu sekitar 8 KM dari bandara.</p><br>
+		                </div>
+					</div>		
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">	 <p><b> Gunung Rian </b></p>
+
+							<a href="gambar/kalut/c.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kalut/c.png"  alt="" />
+						     	<a style="font-weight:bold;color:text-decoration:none" href="map/ku3.html">	Lihat Peta </a>	
+						     <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+						  							<p style="text-align:left;	padding:10px 10px 0;">Gunung Rian berada di Kecamatan Sesayap yang dihiasi air terjun yang indah mengalir sepanjang tahun. Kelebihannya dari wisata air terjun ini memiliki ketinggi + 90 m sampai ke puncaknya, air terjun ini terdiri dari beberapa umpakan. Setiap umpakan terdiri atas + 20m mendatar dan 20 m meninggi.
+</p><br>		<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Jika ingin ke gunung rian harus naik pesawat ke daerah nunukan, lalu naik boat ke tidung, dari sana tidak jauh sekitar 5 KM dari pelabuhan tidung.</p><br>
+		                </div>
+					</div>				
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper "> <p><b> Gunung Putih </b></p>
+							<a href="gambar/kalut/d.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kalut/d.png" alt=""  />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/ku4.html">	Lihat Peta </a>	
+						     <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							
+							<p style="text-align:left;	padding:10px 10px 0;">Obyek Wisata Gunung Putih di Kabupaten Bulungan Gunung Putih merupakan salah satu desa yang berada di kecamatan Tanjung Palas, Bulungan, Kalimantan Utara, Indonesia. Gunung Putih adalah wisata alam gunung kapur yang berwarna putih. Gunung mempunyai keindahan yang alami dengan memiliki relief-relief seperti pahatan seorang seniman di gunung kapur. Gunung Putih mempunyai panorama alam yang indah dan menakjubkan.
+
+</p><br>		<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Jika ingin ke gunung putih dari pusat kota tinggal menaiki angkutan umum, sekitar 2 KM sampai ditujuan.</p><br>
+		                </div>
+					</div>	
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper "> 		<p><b> Monumen Australia </b></p>
+							<a href="gambar/kalut/e.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kalut/e.png" alt=""  />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/ku5.html">	Lihat Peta </a>	
+						    <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+					
+							<p style="text-align:left;	padding:10px 10px 0;">Di Kota Tarakan ada Monumen Australia yang berada di Jl. Pulau Kalimantan. Monumen ini merupakan simbol perjuangan tentara Australia yang turut membantu dalam upaya pembebasan Tarakan dari pendudukan Jepang. Dahulunya bangunan ini adalah merupakan tanda masuk ke Pemakaman 225. Pemakaman ini merupakan tempat dikuburkannya tentara Australia yang tewas dalam peperangan. Pada tahun 1946 pemakaman ini dipindahkan ke Pulau Labuan di Malaysia Timur. Namun karena banyak wisatawan dari Australia yang masih sengaja datang ke Tarakan untuk berziarah, sehingga bangunan Monumen Australia dibiarkan tetap ada sampai sekarang.</p><br> <p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Dipusat kota tarakan, tidak jauh dari kantor walikota tarakan
+</p><br>
+		                </div>
+					</div>			
+					
+					
+					
+					<div class="clearfix"> </div>
+					</div>	
+			<!-- Script for gallery Here -->
+				<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+					<script type="text/javascript">
+					$(function () {
+						
+						var filterList = {
+						
+							init: function () {
+							
+								// MixItUp plugin
+								// http://mixitup.io
+								$('#portfoliolist').mixitup({
+									targetSelector: '.portfolio',
+									filterSelector: '.filter',
+									effects: ['fade'],
+									easing: 'snap',
+									// call the hover effect
+									onMixEnd: filterList.hoverEffect()
+								});				
+							
+							},
+							
+							hoverEffect: function () {
+							
+								// Simple parallax effect
+								$('#portfoliolist .portfolio').hover(
+									function () {
+										$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+										$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+									},
+									function () {
+										$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+										$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+									}		
+								);				
+							
+							}
+				
+						};
+						
+						// Run the show!
+						filterList.init();
+					});	
+					</script>
+			<!-- Gallery Script Ends -->
+			</div>
+		</div>
+		<!---->
+	<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery.swipebox.min.js"></script> 
+	    <script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+
+	<!---->
+
+		<!---->
+		
+	</div>	
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+				
+				<p class="footer-class"> Kebudayaan dan Wisata Pulau Kalimantan </p>
+		</div>	
+		  <script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+		</div>
+
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Acrostia Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+
+<script src="js/responsiveslides.min.js"></script>
+	<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>
+  <!---->
+  <script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+					</script>
+
+					<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+		
+		 <script type="text/javascript" charset="utf-8">
+
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+      
+        function onDeviceReady() {
+       
+        }
+        
+         // Wait for Cordova to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Cordova is ready
+        //
+        function onDeviceReady() {
+       
+        }
+        
+        // Audio player
+        //
+          var my_media = null;
+        var mediaTimer = null;
+
+      
+        // Play audio
+        //
+        function playAudio(src) {
+            // Create Media object from src
+            my_media = new Media(src, onSuccess, onError);
+
+            // Play audio
+            my_media.play();
+
+            // Update my_media position every second
+            if (mediaTimer == null) {
+                mediaTimer = setInterval(function() {
+                    // get my_media position
+                    my_media.getCurrentPosition(
+                        // success callback
+                        function(position) {
+                            if (position > -1) {
+                                setAudioPosition((position) + " sec");
+                            }
+                        },
+                        // error callback
+                        function(e) {
+                            console.log("Error getting pos=" + e);
+                            setAudioPosition("Error: " + e);
+                        }
+                    );
+                }, 1000);
+            }
+        }
+
+        // Pause audio
+        // 
+        function pauseAudio() {
+            if (my_media) {
+                my_media.pause();
+            }
+        }
+
+        // Stop audio
+        // 
+        function stopAudio() {
+            if (my_media) {
+                my_media.stop();
+            }
+            clearInterval(mediaTimer);
+            mediaTimer = null;
+        }
+
+        // onSuccess Callback
+        //
+        function onSuccess() {
+            console.log("playAudio():Audio Success");
+        }
+
+        // onError Callback 
+        //
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' + 
+                  'message: ' + error.message + '\n');
+        }
+
+        // Set audio position
+        // 
+        function setAudioPosition(position) {
+            document.getElementById('audio_position').innerHTML = position;
+        }
+
+
+        </script>
+        
+      
+	
+
+
+</head>
+<body  onload="playAudio('/android_asset/www/web/audio/manari_manasai.mp3')"> 
+<!--header-->
+<!--banner-->
+<div class="banner" id="home" >
+	<div class="slider" >
+	    <div class="callbacks_container">
+	      <ul class="rslides" id="slider">
+	        <li>
+	          <img src="images/banner.jpg" alt="">
+			  <div class="banner-matter">
+			
+			 
+			  </div>
+	        </li>
+	        <li>
+	          <img src="images/banner1.jpg" alt=""> 
+			<div class="banner-matter">
+				
+			  
+			  </div>			  
+	        </li>
+	        <li>
+	          <img src="images/banner2.jpg" alt="">
+				<div class="banner-matter">
+				
+			  
+			  </div>
+	        </li>
+	      </ul>
+	  </div>
+	  </div>
+	  </div>
+	<!---->
+	<div class="header" >
+			<div class="container">
+			<div class="fixed-header">
+
+			<div class="logo">
+					<a href="index.html"><a href="#" class="meet1">Budaya & Wisata<span> </span></a></a>
+			</div>
+			
+				<div class="top-nav cssmenu">
+				<nav class="nav clearfix">
+					<a id="menu-toggle" class="anchor-link"><img src="images/menu.png" alt="" /></a>
+					<ul class="simple-toggle" id="nav">
+			        	<li class="current"><a href="#home" class="scroll">Home</a></li>		        	
+			        	<li ><a href="#services" class="scroll"> Budaya</a></li>
+						<li ><a href="#work" class="scroll">Wisata</a></li>
+			        </ul>
+				</nav>
+				
+				<script type="text/javascript">
+					  $(document).ready(function() {
+					
+						$('#menu-toggle').click(function () {
+					      $('#nav').toggleClass('open');
+					      e.preventDefault();
+					    });
+					    
+					});
+				</script>
+				<!---->
+				<script src="js/jquery.nav.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#nav').onePageNav({
+			begin: function() {
+			console.log('start')
+			},
+			end: function() {
+			console.log('stop')
+			}
+		});
+	});
+	</script>
+				
+				</div>
+				<div class="clearfix"> </div>
+				</div>
+		</div>
+	</div>
+	
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header").addClass("fixed");
+				}else{
+					$(".header").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+		<!-- /script-for sticky-nav -->
+
+<!--content-->
+	<div class="content">
+	<!---->
+		<div class="services" id="services">
+			<div class="container">
+				<div class="service-head">
+					<h3>KALIMANTAN TENGAH</h3><br>
+					<img src="gambar/kalteng/6.png" width="50%">
+					<span>Kalimantan Tengah</span>
+					<p>Kalimantan Tengah adalah salah sebuah provinsi di Indonesia yang terletak di pulau Kalimantan. Ibukotanya adalah Kota Palangka Raya. Kalimantan Tengah memiliki luas 157.983 km² dan berpenduduk sekitar 2.202.599 jiwa, yang terdiri atas 1.147.878 laki-laki dan 1.054.721 perempuan (hasil Sensus Penduduk Indonesia 2010)</p>
+				</div>
+				<div class=" services-grid">
+					<div class="col-md-4 service-grid"><h5>Rumah Adat </h5><br>
+						<img class="img-responsive" src="gambar/kalteng/1.png" alt=" " />
+						
+						<p>Rumah adat Kalimantan Tengah dinamakan Rumah Betang, Bentuk rumahnya panjang, bawah kolongnya digunakan untuk pertenun dan menumbuk padi dan dihuni oleh lebih kurang 20 kepala keluarga. Rumah terdiri dari 6 kamar antara lain untuk penyimpanan alat-alat perang, kamar untuk pendidikan gadis, tempat sesajian, tempat upacara adat dan agama, tempat penginapan dan ruang tamu. Pada kiri-kanan ujung atap dihiasi tombak sebagai penolak mara bahaya. </p>
+					</div>
+					<div class="col-md-4 service-grid"><h5>Pakaian Adat </h5><br>
+						<img class="img-responsive" src="gambar/kalteng/5.png" alt=" " />
+						
+						<p>Pakaian adatnya pria Kalimantan Tengah berupa kepala berhiasankan bulu-bulu enggang, rompi dan kain-kain yang menutup bagian bawah badan sebatas lutut. Sebuah tameng kayu hiasan yang khas bersama mandaunya berada di tangan. Perhiasan yang dipakai berupa kalung-kalung manik dan ikat pinggang. Wanitanya memakai baju rompi dan kain (rok pendek), tutup kepala berhiaskan bulu-bulu enggang, kalung manik, ikat pinggang dan beberapa gelang tangan. </p>
+					</div>
+					<div class="col-md-4 service-grid"><h5>Senjata Tradisional</h5><br>
+						<img class="img-responsive" src="gambar/kalbar/2.png"  alt=" " />
+						<h6>Mandau</h6>
+						<p>Di Kalimantan Tengah senjata tradisionalnya adalah mandau. Bagian hulunya dihiasi ukiran burung tinggang, sejenis burung enggang. Menurut kepercayaan mereka, burung tinggang adalah penguasa seluruh alam. Senjata terkenal lainnya adalah lunjuk sumpit, randu (sejenis tombak) dan perisai.</p>
+					</div>
+					<div class="col-md-4 service-grid "><h5>Alat Musik</h5><br>
+						<img class="img-responsive" src="gambar/kalteng/3 (1).png" alt=" " />
+						<h6>Kecapi Sike</h6><br>
+						<img class="img-responsive" src="gambar/kalteng/3 (2).png" alt=" " />
+						<h6>Bahalang</h6><br>
+						<img class="img-responsive" src="gambar/kalteng/3 (3).png" alt=" " />
+						<h6>Balawung</h6><br>
+						<img class="img-responsive" src="gambar/kalteng/3 (4).png" alt=" " />
+						<h6>Gandang</h6><br>
+						<img class="img-responsive" src="gambar/kalteng/3 (5).png" alt=" " />
+						<h6>Garantung</h6><br>
+						<img class="img-responsive" src="gambar/kalteng/3 (6).png" alt=" " />
+						<h6>Katambung</h6><br>
+
+
+					</div>
+					<div class="col-md-4 service-grid"><h5>Tarian Daerah </h5><br>
+						<img class="img-responsive" src="gambar/kalteng/4 (1).png" alt=" " />
+						<h6>Tari Dadas</h6><br>
+						<img class="img-responsive" src="gambar/kalteng/4 (2).png" alt=" " />
+						<h6>Tari Kencet Papatai</h6><br>
+						<img class="img-responsive" src="gambar/kalteng/4 (3).png" alt=" " />
+						<h6>Tari Pecuk Pina</h6><br>
+						<img class="img-responsive" src="gambar/kalteng/4 (4).png" alt=" " />
+						<h6>Tari Serumpai</h6><br>
+						<img class="img-responsive" src="gambar/kalteng/4 (5).png" alt=" " />
+						<h6>Tari Dadas</h6><br>
+						<img class="img-responsive" src="gambar/kalteng/4 (6).png" alt=" " />
+						<h6>Tari Belian Bowo</h6>
+					</div>
+					<div class="col-md-4 service-grid"><h5>Suku dan Bahasa </h5><br>
+						
+						<p>Suku : Dayak, Ngaju, Maanyan, Dusun, Lawangan Bukupai, Ot Danun, dan lain-lain. Bahasa Daerah : Dayak, Ngayu, Ot Danun, dan lain-lainnya. </p>
+					</div>
+
+
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		</div>
+		<!---->
+	
+		<!---->
+		<div class="work" id="work">
+			<div class="container">
+				
+				<div class=" work-top">					
+				<div class="by-type">
+					<h6>Wisata</h6>
+				</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+					<div id="portfoliolist">
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper ">		
+							<a href="gambar/kalteng/a.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						    <img class="img-responsive" src="gambar/kalteng/a.png" alt=""  /> 
+						    <a style="font-weight:bold;color:text-decoration:none" href="map/kg1.html">	Lihat Peta </a>
+
+							<span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							<p><b>Muara Teweh</b></p>
+							<p style="text-align:left;	padding:10px 10px 0;">Muara teweh adalah ibukota dari kabupaten barito utara yang mayoritas penduduknya berasal dari suku dayak bakumpai, seubetnis dayak yang mayoritas beragama islam. Kota ini terletak dipedalaman sungai barito , yang membelah pulau kalimantan dengan kota banjarmasin hingga kabupaten murung raya, kalimantan tengah.</p><br>			
+							<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Terletak dipusat kota Teweh, 3 jam dari Palangkaraya
+</p><br>	
+										
+						</div>
+					</div>				
+					<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gambar/kalteng/b.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						    <img class="img-responsive" src="gambar/kalteng/b.png" alt=""  />
+						    <a style="font-weight:bold;color:text-decoration:none" href="map/kg2.html">	Lihat Peta </a>
+
+						     <div class="simple" >						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							<p><b>Danau Tahai</b></p>
+							<p style="text-align:left;	padding:10px 10px 0;">Danau Tahai ,adalah sebuah danau kecil yang terdapat di Kota Palangkaraya. Keistimewaan kawasan wisata Danau Tahai lainnya adalah disediakannya jembatan-jembatan kayu yang mengelilingi areal hutan ini, sehingga pengunjung tidak perlu khawatir akan terendam air gambut. Di dalam hutan,pengunjung dapat menikmati sejuk dan segarnya udara hutan sambil mendengarkan merdunya kicauan burung-burung.</p><br>	
+							<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Terletak dipusat kota Palangkaraya
+</p><br>	
+
+		                </div>
+					</div>		
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="gambar/kalteng/c.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kalteng/c.png"  alt="" />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/kg3.html">	Lihat Peta </a>
+
+						    <span> </span>
+						     <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+						    <p><b>Taman Nasional Tanjung Puting</b></p>
+							<p style="text-align:left;	padding:10px 10px 0;">Taman Nasional Tanjung Puting adalah sebuah taman nasional yang terletak di semenanjung barat daya provinsi Kalimantan Tengah. Tanjung Puting pada awalnya merupakan cagar alam dan suaka margasatwa dengan luas total 305.000 ha yang ditetapkan oleh pemerintah Hindia Belanda pada tanggal 13 Juni 1936. Selanjutnya pada tanggal 12 Mei 1984 oleh Menteri Kehutanan, Tanjung Puting ditetapkan sebagai Taman Nasional luasnya menjadi 415.040 ha.</p><br>	
+							<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Terletak di semenanjung barat palangkaraya, harus menaiki kendaraan pribadi sekitar 3,5 jam.
+</p><br>	
+
+		                </div>
+					</div>				
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper ">		
+							<a href="gambar/kalteng/d.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kalteng/d.png" alt=""  />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/kg4.html">	Lihat Peta </a>
+
+						     <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							<p><b>  Pantai Ujung Pandaran </b></p>
+							<p style="text-align:left;	padding:10px 10px 0;">Pantai Ujung Pandaran dengan hamparan pasir putih yang begitu luas, barisan pohon nyiur yang jika dilihat dari kejauhan seolah-olah memagari pantai ini, deburan ombak yang cukup besar, dan kekayaan biota laut khas pantai ini. Khusus untuk biota laut, di Pantai Ujung Pandaran banyak terdapat ubur-ubur, ikan pari, berbagai jenis ikan kecil yang hidup di terumbu karang, dan lain-lain. </p><br>		
+							<p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Berada di Sampit, selatan dari Palangkaraya.</p><br>	
+
+		                </div>
+					</div>	
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper ">		
+							<a href="gambar/kalteng/e.png" class="b-link-stripe b-animate-go  thickbox swipebox">
+						     <img class="img-responsive" src="gambar/kalteng/e.png" alt=""  />
+						     <a style="font-weight:bold;color:text-decoration:none" href="map/kg5.html">	Lihat Peta </a>
+						    <span > </span>
+						     <div class="simple">						    	
+								<label> </label>
+						    </div>		
+						</a>	
+							<p><b>Arboretum Nyaru Menteng </b></p>
+							<p style="text-align:left;	padding:10px 10px 0;">Arboretum Nyaru Menteng adalah sebuah kawasan hutan yang di dalamnya terdapat banyak spicies flora dan fauna, yang menjadi objek wisata menarik di kota tersebut ,Di lokasi ini banyak terdapat koleksi kehutanan dengan berbagai jenis seperti tanaman geronggang, meranti, cemara, dan tampan ,terdapat juga proyek reintroduksi sekitar 200 ekor orangutan.</p><br><p style="text-align:left;	padding:10px 10px 0;font-weight:bold">NB : Berada dipusat kota Palangkaraya, tinggal menaiki angkutan umum sekitar setengah 
+
+jam.</p><br>	
+
+		                </div>
+					</div>			
+					
+					
+					
+					<div class="clearfix"> </div>
+					</div>	
+			<!-- Script for gallery Here -->
+				<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+					<script type="text/javascript">
+					$(function () {
+						
+						var filterList = {
+						
+							init: function () {
+							
+								// MixItUp plugin
+								// http://mixitup.io
+								$('#portfoliolist').mixitup({
+									targetSelector: '.portfolio',
+									filterSelector: '.filter',
+									effects: ['fade'],
+									easing: 'snap',
+									// call the hover effect
+									onMixEnd: filterList.hoverEffect()
+								});				
+							
+							},
+							
+							hoverEffect: function () {
+							
+								// Simple parallax effect
+								$('#portfoliolist .portfolio').hover(
+									function () {
+										$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+										$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+									},
+									function () {
+										$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+										$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+									}		
+								);				
+							
+							}
+				
+						};
+						
+						// Run the show!
+						filterList.init();
+					});	
+					</script>
+			<!-- Gallery Script Ends -->
+			</div>
+		</div>
+		<!---->
+	<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery.swipebox.min.js"></script> 
+	    <script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+
+	<!---->
+
+		<!---->
+		
+	</div>	
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+				
+				<p class="footer-class"> Kebudayaan dan Wisata Pulau Kalimantan </p>
+		</div>	
+		  <script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+		</div>
+
+</body>
+</html>
